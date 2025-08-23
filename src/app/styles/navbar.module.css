@@ -1,0 +1,235 @@
+.navbar {
+  background-color: #005bb5; /* Slightly darker blue for better contrast and sophistication */
+  color: #ffffff;
+  padding: 1rem 2rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Softer shadow for depth */
+  transition: background-color 0.3s ease; /* Smooth background transition */
+}
+
+.navbar.scrolled {
+  background-color: #004a99; /* Darker shade when scrolled for visual feedback */
+}
+
+.navContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1280px; /* Slightly wider for modern screens */
+  margin: 0 auto;
+}
+
+.navLinks {
+  display: flex;
+  list-style: none;
+  gap: 2.5rem; /* Increased gap for better spacing */
+}
+
+.navLink {
+  color: #e6f0ff; /* Slightly off-white for better readability */
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 600; /* Bolder font for prominence */
+  position: relative; /* For underline effect */
+  transition: color 0.3s ease, transform 0.2s ease; /* Added transform for hover effect */
+}
+
+.navLink:hover {
+  color: #ffffff; /* Pure white for hover */
+  transform: translateY(-2px); /* Subtle lift effect */
+}
+
+.navLink::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: #ffffff;
+  transition: width 0.3s ease; /* Smooth underline animation */
+}
+
+.navLink:hover::after {
+  width: 100%; /* Underline expands on hover */
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 250px;
+  height: 60px;
+  transition: transform 0.3s ease; /* Smooth scaling for logo */
+}
+
+.logo img:hover {
+  transform: scale(1.05); /* Subtle zoom on hover */
+}
+
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: transform 0.3s ease; /* Smooth rotation for hamburger */
+}
+
+.hamburger:hover {
+  transform: rotate(90deg); /* Playful rotation on hover */
+}
+
+.hamburgerIcon {
+  font-size: 1.8rem;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 280px; /* Slightly wider for comfort */
+  height: 100%;
+  background: linear-gradient(180deg, #005bb5, #003087); /* Gradient for modern look */
+  transform: translateX(100%);
+  transition: transform 0.4s ease-in-out; /* Smoother sidebar transition */
+  z-index: 1001;
+  padding: 2.5rem 2rem;
+  box-shadow: -4px 0 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+}
+
+.sidebarOpen {
+  transform: translateX(0);
+}
+
+.closeButton {
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 2rem;
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  cursor: pointer;
+  transition: transform 0.3s ease; /* Smooth rotation for close button */
+}
+
+.closeButton:hover {
+  transform: rotate(180deg); /* Rotate on hover for interactivity */
+}
+
+.sidebarLinks {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem; /* Increased gap for better touch targets */
+  margin-top: 4rem;
+}
+
+.sidebarLink {
+  color: #e6f0ff;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 500;
+  position: relative; /* For underline effect */
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.sidebarLink:hover {
+  color: #ffffff;
+  transform: translateX(5px); /* Subtle slide effect */
+}
+
+.sidebarLink::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: #ffffff;
+  transition: width 0.3s ease;
+}
+
+.sidebarLink:hover::after {
+  width: 100%; /* Underline expands on hover */
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6); /* Slightly darker for better contrast */
+  z-index: 1000;
+  opacity: 0;
+  transition: opacity 0.3s ease; /* Smooth fade-in for overlay */
+}
+
+.overlay.active {
+  opacity: 1; /* Fade-in when active */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navLinks {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .logo img {
+    width: 160px; /* Adjusted for better proportionality */
+    height: 40px;
+  }
+
+  .navbar {
+    padding: 1rem 1.5rem;
+  }
+
+  .sidebar {
+    width: 240px; /* Slightly larger for better usability */
+  }
+
+  .sidebarLink {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo img {
+    width: 130px;
+    height: 32px;
+  }
+
+  .navbar {
+    padding: 0.75rem 1rem;
+  }
+
+  .hamburgerIcon {
+    font-size: 1.6rem;
+  }
+
+  .sidebar {
+    width: 200px;
+    padding: 2rem 1.5rem;
+  }
+
+  .sidebarLink {
+    font-size: 1rem;
+  }
+
+  .closeButton {
+    font-size: 1.8rem;
+  }
+}
