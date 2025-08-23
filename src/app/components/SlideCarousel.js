@@ -136,7 +136,7 @@ export default function SlideCarousel() {
       {/* Mobile Static Image Layout */}
       <div className={styles.mobileLayout}>
         <Image
-          src="/mobile.png" // New image for mobile
+          src="/mobile.jpg" // New image for mobile
           alt="SupaNova Mobile Background"
           fill
           sizes="100vw"
@@ -156,3 +156,4 @@ export default function SlideCarousel() {
   );
 
 }
+
