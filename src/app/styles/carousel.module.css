@@ -2,7 +2,7 @@
   position: relative;
   width: 100%;
   max-width: 1440px;
-  margin: 0 auto; /* Removed top margin to touch navbar */
+  margin: 0 auto; /* Remove top margin to touch navbar */
 }
 
 .carousel {
@@ -154,11 +154,10 @@
 .mobileLayout {
   display: none; /* Hidden by default on desktop */
   position: relative;
-  width: 100vw; /* Explicitly set to full viewport width */
+  width: 100%;
   height: 100vh; /* Full screen height */
   min-height: -webkit-fill-available; /* Ensure full height on mobile browsers */
   margin: 0; /* Remove any margin to touch navbar and bottom */
-  padding: 0; /* Remove padding to ensure full width */
 }
 
 .mobileOverlay {
@@ -236,7 +235,6 @@
     display: block; /* Show static layout on mobile */
   }
   .mobileLayout {
-    width: 100vw; /* Ensure full viewport width */
     height: 100vh; /* Ensure full screen height */
     min-height: -webkit-fill-available;
   }
@@ -252,7 +250,6 @@
 
 @media (max-width: 480px) {
   .mobileLayout {
-    width: 100vw;
     height: 100vh;
     min-height: -webkit-fill-available;
   }
