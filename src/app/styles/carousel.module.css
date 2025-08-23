@@ -179,7 +179,7 @@
 }
 
 .mobileCaption {
-  font-size: 2rem;
+  font-size: 4rem;
   font-weight: bold;
   margin-bottom: 1.5rem; /* Increased for better spacing */
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
@@ -300,4 +300,5 @@
     height: 12px;
   }
 }
+
 
