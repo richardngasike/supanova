@@ -155,6 +155,7 @@
   display: none; /* Hidden by default on desktop */
   position: relative;
   width: 100%;
+  max-width: 1440px;
   height: 100vh; /* Full screen height */
   min-height: -webkit-fill-available; /* Ensure full height on mobile browsers */
   margin: 0; /* Remove any margin to touch navbar and bottom */
@@ -299,3 +300,4 @@
     height: 12px;
   }
 }
+
