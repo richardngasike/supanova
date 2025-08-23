@@ -143,7 +143,7 @@ export default function SlideCarousel() {
           className={styles.image}
         />
         <div className={styles.mobileOverlay}>
-          <h3 className={styles.mobileCaption}>Welcome to SupaNova</h3>
+          <h3 className={styles.mobileCaption}>SupaNova Technologies</h3>
           <a href="/services" className={styles.mobileStartButton}>
             Start with Us
           </a>
@@ -156,4 +156,5 @@ export default function SlideCarousel() {
   );
 
 }
+
 
