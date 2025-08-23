@@ -136,7 +136,7 @@ export default function SlideCarousel() {
       {/* Mobile Static Image Layout */}
       <div className={styles.mobileLayout}>
         <Image
-          src="/mobile.jpg" // New image for mobile
+          src="/mobile.png" // New image for mobile
           alt="SupaNova Mobile Background"
           fill
           sizes="100vw"
@@ -144,14 +144,15 @@ export default function SlideCarousel() {
         />
         <div className={styles.mobileOverlay}>
           <h3 className={styles.mobileCaption}>Welcome to SupaNova</h3>
-          <a href="https://supanovatech.com" className={styles.mobileStartButton}>
-            Start A Project
+          <a href="/services" className={styles.mobileStartButton}>
+            Start with Us
           </a>
-          <a href="https://supanovatech.com" className={styles.mobileExploreButton}>
+          <a href="/about" className={styles.mobileExploreButton}>
             Explore Our World!
           </a>
         </div>
       </div>
     </div>
   );
+
 }
