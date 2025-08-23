@@ -2,7 +2,7 @@
   position: relative;
   width: 100%;
   max-width: 1440px;
-  margin: 70px auto 0;
+  margin: 0 auto; /* Remove top margin to touch navbar */
 }
 
 .carousel {
@@ -155,8 +155,9 @@
   display: none; /* Hidden by default on desktop */
   position: relative;
   width: 100%;
-  height: 100vh; /* Full screen height on mobile */
+  height: 100vh; /* Full screen height */
   min-height: -webkit-fill-available; /* Ensure full height on mobile browsers */
+  margin: 0; /* Remove any margin to touch navbar and bottom */
 }
 
 .mobileOverlay {
@@ -226,6 +227,9 @@
 @media (max-width: 768px) {
   .carousel {
     display: none; /* Hide carousel on mobile */
+  }
+  .carouselContainer {
+    margin: 0; /* Remove margin to touch navbar */
   }
   .mobileLayout {
     display: block; /* Show static layout on mobile */
