@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
-import styles from "./WhatsAppFAB.module.css";
+import styles from "../styles/WhatsAppFAB.module.css";
 
 const WhatsAppFAB = () => {
   useEffect(() => {
