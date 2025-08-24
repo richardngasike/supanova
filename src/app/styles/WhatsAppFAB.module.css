@@ -29,6 +29,7 @@
 
 .chatText {
   background-color: #25d366; /* Match button background */
-  padding: 0 10px; /* Padding to connect with icon */
+  padding: 0 2px; /* Padding to connect with icon */
   border-radius: 0 25px 25px 0; /* Rounded right edges only */
+
 }
