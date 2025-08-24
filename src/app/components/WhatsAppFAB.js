@@ -27,7 +27,7 @@ const WhatsAppFAB = () => {
 
       const text = document.createElement("span");
       text.className = styles.chatText;
-      text.textContent = "ChatUs";
+      text.textContent = "Whatsapp";
 
       link.appendChild(icon);
       link.appendChild(text);
@@ -49,5 +49,6 @@ const WhatsAppFAB = () => {
 };
 
 export default WhatsAppFAB;
+
 
 
