@@ -1,20 +1,18 @@
 .whatsappFab {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
+  bottom: 40px;
+  right: 40px;
   display: flex;
   align-items: center;
+  justify-content: center;
   background-color: #25d366; /* WhatsApp green */
-  color: white;
-  padding: 10px 15px;
-  border-radius: 25px; /* Rounded edges for a modern look */
-  text-decoration: none;
-  font-family: "Inter", sans-serif;
-  font-size: 1rem;
-  font-weight: bold;
+  border-radius: 50%; /* Circular button */
+  padding: 12px; /* Adjusted padding for icon-only button */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow for lift effect */
   z-index: 1000; /* Ensure it stays above other content */
   transition: transform 0.2s ease, background-color 0.3s ease;
+  width: 60px; /* Fixed size for circular button */
+  height: 60px; /* Fixed size for circular button */
 }
 
 .whatsappFab:hover {
@@ -23,13 +21,40 @@
 }
 
 .whatsappIcon {
-  margin-right: 8px; /* Space between icon and text */
-  font-size: 1.5rem; /* Larger icon for visibility */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.chatText {
-  background-color: #25d366; /* Match button background */
-  padding: 0 2px; /* Padding to connect with icon */
-  border-radius: 0 25px 25px 0; /* Rounded right edges only */
+.whatsappIcon img {
+  width: 38px; /* Slightly smaller than container for padding */
+  height: 38px;
+  object-fit: contain; /* Ensure PNG scales correctly */
+}
 
+/* Responsive Design */
+@media (max-width: 768px) {
+  .whatsappFab {
+    width: 50px; /* Smaller for mobile */
+    height: 50px;
+    padding: 10px;
+  }
+
+  .whatsappIcon img {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .whatsappFab {
+    width: 45px; /* Even smaller for very small screens */
+    height: 45px;
+    padding: 8px;
+  }
+
+  .whatsappIcon img {
+    width: 28px;
+    height: 28px;
+  }
 }

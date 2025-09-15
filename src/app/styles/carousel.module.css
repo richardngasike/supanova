@@ -1,22 +1,21 @@
 .carouselContainer {
   position: relative;
   width: 100%;
-  max-width: 1440px;
-  margin: 0 auto; /* Remove top margin to touch navbar */
+  max-width: 100%;
+  overflow: hidden;
+  margin: 0 auto;
 }
 
 .carousel {
   position: relative;
   width: 100%;
-  overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  display: block; /* Default for desktop */
+  height: 600px; /* Default height for desktop */
 }
 
 .slideContainer {
   position: relative;
   width: 100%;
-  height: 60vh;
+  height: 100%;
 }
 
 .slide {
@@ -27,9 +26,6 @@
   height: 100%;
   opacity: 0;
   transition: opacity 0.5s ease-in-out;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .activeSlide {
@@ -37,9 +33,9 @@
 }
 
 .image {
+  object-fit: cover; /* Ensures image covers the slide area */
   width: 100%;
   height: 100%;
-  object-fit: cover;
 }
 
 .overlay {
@@ -48,48 +44,45 @@
   left: 0;
   width: 100%;
   height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: rgba(0, 0, 0, 0.5);
-  color: white;
   text-align: center;
-  padding: 1.5rem;
-  z-index: 1;
+  color: #ffffff;
+  padding: 2rem;
 }
 
 .caption {
   font-size: 2.5rem;
-  font-weight: bold;
-  margin-bottom: 0.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  font-family: "Inter", sans-serif;
 }
 
 .subCaption {
-  font-size: 1.2rem;
-  font-weight: normal;
-  margin-bottom: 1rem;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-  max-width: 80%;
-  font-family: "Inter", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 400;
+  margin-bottom: 1.5rem;
+  max-width: 600px;
 }
 
 .learnMoreButton {
   background-color: #005bb5;
-  color: white;
+  color: #ffffff;
   padding: 0.75rem 1.5rem;
-  border-radius: 5px;
   text-decoration: none;
-  font-weight: bold;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 600;
   transition: background-color 0.3s ease, transform 0.2s ease;
-  font-family: "Inter", sans-serif;
 }
 
 .learnMoreButton:hover {
-  background-color: #003087;
-  transform: translateY(-2px);
+  background-color: #fffb00;
+  transform: scale(1.05);
+  color: black;
 }
 
 .prev,
@@ -97,208 +90,102 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.6);
-  color: white;
+  background: rgba(0, 0, 0, 0.5);
+  color: #ffffff;
   border: none;
-  padding: 0.75rem;
+  font-size: 2rem;
   cursor: pointer;
-  border-radius: 50%;
-  font-size: 1rem;
-  width: 40px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 2;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.prev {
-  left: 0;
-}
-
-.next {
-  right: 0;
+  padding: 1rem;
+  z-index: 10;
+  transition: background-color 0.3s ease;
 }
 
 .prev:hover,
 .next:hover {
-  background-color: #005bb5;
-  transform: translateY(-50%) scale(1.1);
+  background: #fffb00;
+  color: black;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
 }
 
 .dots {
   position: absolute;
-  bottom: 15px;
+  bottom: 20px;
   width: 100%;
-  display: flex;
-  justify-content: center;
-  gap: 0.75rem;
-  z-index: 2;
+  text-align: center;
 }
 
 .dot {
-  width: 14px;
-  height: 14px;
-  background-color: #bbb;
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background: #ffffff;
+  opacity: 0.5;
   border-radius: 50%;
+  margin: 0 8px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 .activeDot {
-  background-color: #005bb5;
+  opacity: 1;
+  transform: scale(1.2);
 }
 
-/* Mobile Layout */
-.mobileLayout {
-  display: none; /* Hidden by default on desktop */
-  position: relative;
-  width: 100%;
-  max-width: 1440px;
-  height: 100vh; /* Full screen height */
-  min-height: -webkit-fill-available; /* Ensure full height on mobile browsers */
-  margin: 0; /* Remove any margin to touch navbar and bottom */
-}
-
-.mobileOverlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background: rgba(0, 0, 0, 0.5);
-  color: white;
-  text-align: center;
-  padding: 1.5rem;
-  z-index: 1;
-}
-
-.mobileCaption {
-  font-size: 4rem;
-  font-weight: bold;
-  margin-bottom: 1.5rem; /* Increased for better spacing */
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  font-family: "Inter", sans-serif;
-}
-
-/* Styled buttons to match sample image */
-.mobileStartButton {
-  background-color: #007bff; /* Blue like "Start A Project" */
-  color: white;
-  padding: 1rem 2.5rem; /* Larger padding for prominence */
-  border-radius: 25px; /* Rounded edges like sample */
-  text-decoration: none;
-  font-weight: bold;
-  margin-bottom: 1.5rem; /* Space between buttons */
-  transition: background-color 0.3s ease, transform 0.2s ease;
-  font-family: "Inter", sans-serif;
-  font-size: 1.1rem;
-  box-shadow: 0 4px 6px rgba(0, 123, 255, 0.3); /* Subtle shadow */
-}
-
-.mobileStartButton:hover {
-  background-color: #0056b3; /* Darker blue on hover */
-  transform: translateY(-2px);
-}
-
-.mobileExploreButton {
-  background-color: #000; /* Black like "Explore Our World!" */
-  color: white;
-  padding: 1rem 2.5rem; /* Larger padding for prominence */
-  border-radius: 25px; /* Rounded edges like sample */
-  text-decoration: none;
-  font-weight: bold;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-  font-family: "Inter", sans-serif;
-  font-size: 1.1rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Subtle shadow */
-}
-
-.mobileExploreButton:hover {
-  background-color: #333; /* Darker gray on hover */
-  transform: translateY(-2px);
-}
-
-/* Responsive Design */
+/* Mobile Styles */
 @media (max-width: 768px) {
   .carousel {
-    display: none; /* Hide carousel on mobile */
+    height: 400px; /* Matches typical mobile static image height */
   }
-  .carouselContainer {
-    margin: 0; /* Remove margin to touch navbar */
+
+  .caption {
+    font-size: 1.8rem;
   }
-  .mobileLayout {
-    display: block; /* Show static layout on mobile */
-  }
-  .mobileLayout {
-    height: 100vh; /* Ensure full screen height */
-    min-height: -webkit-fill-available;
-  }
-  .mobileCaption {
-    font-size: 1.5rem;
-  }
-  .mobileStartButton,
-  .mobileExploreButton {
-    padding: 0.75rem 2rem;
+
+  .subCaption {
     font-size: 1rem;
+    max-width: 90%;
+  }
+
+  .learnMoreButton {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .prev,
+  .next {
+    font-size: 1.5rem;
+    padding: 0.5rem;
+  }
+
+  .dot {
+    width: 10px;
+    height: 10px;
+    margin: 0 6px;
   }
 }
 
 @media (max-width: 480px) {
-  .mobileLayout {
-    height: 100vh;
-    min-height: -webkit-fill-available;
-  }
-  .mobileCaption {
-    font-size: 1.2rem;
-  }
-  .mobileStartButton,
-  .mobileExploreButton {
-    padding: 0.6rem 1.5rem;
-    font-size: 0.9rem;
-  }
-}
-
-@media (min-width: 769px) {
-  .mobileLayout {
-    display: none; /* Ensure mobile layout is hidden on desktop */
-  }
-}
-
-@media (max-width: 1024px) {
   .carousel {
-    margin-top: 60px;
+    height: 350px; /* Slightly smaller for smaller mobile devices */
   }
-  .slide {
-    height: 50vh;
-  }
+
   .caption {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
+
   .subCaption {
-    font-size: 1rem;
-    max-width: 85%;
-  }
-  .learnMoreButton {
-    padding: 0.6rem 1.2rem;
-    font-size: 1rem;
-  }
-  .prev,
-  .next {
-    padding: 0.6rem;
     font-size: 0.9rem;
-    width: 36px;
-    height: 36px;
   }
-  .dot {
-    width: 12px;
-    height: 12px;
+
+  .learnMoreButton {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8rem;
   }
 }
-
-
