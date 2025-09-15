@@ -18,6 +18,27 @@ export default function Navbar() {
     { name: "Services", href: "/services" },
     { name: "Contact", href: "/contact" },
     { name: "Shop", href: "/shop" },
+    { name: "Blog", href: "/blog" },
+    { name: "Careers", href: "/careers" },
+    { name: "Support", href: "/support" },
+  ];
+
+  const socialItems = [
+    {
+      name: "Twitter",
+      href: "https://twitter.com/supanovatech",
+      icon: "/twitter.png",
+    },
+    {
+      name: "LinkedIn",
+      href: "https://linkedin.com/company/supanovatech",
+      icon: "/linkedin.svg",
+    },
+    {
+      name: "Instagram",
+      href: "https://instagram.com/supanovatech",
+      icon: "/instagram.svg",
+    },
   ];
 
   return (
@@ -70,8 +91,33 @@ export default function Navbar() {
               >
                 {item.name}
               </Link>
+              <hr className={styles.sidebarSeparator} />
             </li>
           ))}
+          <li className={styles.socialLinks}>
+            <h4 className={styles.socialTitle}>Follow Us</h4>
+            {socialItems.map((item) => (
+              <div key={item.name}>
+                <Link
+                  href={item.href}
+                  className={styles.sidebarSocialLink}
+                  onClick={toggleSidebar}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Image
+                    src={item.icon}
+                    alt={`${item.name} icon`}
+                    width={20}
+                    height={20}
+                    className={styles.socialIcon}
+                  />
+                  {item.name}
+                </Link>
+                <hr className={styles.sidebarSeparator} />
+              </div>
+            ))}
+          </li>
         </ul>
       </div>
 
