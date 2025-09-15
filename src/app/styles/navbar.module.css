@@ -35,11 +35,11 @@
   font-size: 1.1rem;
   font-weight: 600; /* Bolder font for prominence */
   position: relative; /* For underline effect */
-  transition: red 0.3s ease, transform 0.2s ease; /* Added transform for hover effect */
+  transition: color 0.3s ease, transform 0.2s ease; /* Fixed: Removed invalid 'red' property */
 }
 
 .navLink:hover {
-  color: #ffd900; /* Pure white for hover */
+  color: #ffd900; /* Yellow for hover */
   transform: translateY(-2px); /* Subtle lift effect */
   text-transform: uppercase;
 }
@@ -145,7 +145,7 @@
 
 .sidebarLink:hover {
   color: #ffffff;
-  transform: translateX(5px); /* Subtle slide effect */
+  transform: translateX(5px) scale(1.05); /* Enhanced hover with scale */
 }
 
 .sidebarLink::after {
@@ -179,7 +179,7 @@
   opacity: 1; /* Fade-in when active */
 }
 
-/* Responsive Design */
+/* Animations for Sidebar Links on Small Screens */
 @media (max-width: 768px) {
   .navLinks {
     display: none;
@@ -204,6 +204,30 @@
 
   .sidebarLink {
     font-size: 1.1rem;
+    opacity: 0; /* Start hidden for animation */
+    transform: translateX(20px); /* Start off-screen to the right */
+    animation: slideIn 0.3s ease-out forwards;
+  }
+
+  /* Staggered animation for each link */
+  .sidebarLinks .sidebarLink:nth-child(1) {
+    animation-delay: 0.1s;
+  }
+
+  .sidebarLinks .sidebarLink:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+
+  .sidebarLinks .sidebarLink:nth-child(3) {
+    animation-delay: 0.3s;
+  }
+
+  .sidebarLinks .sidebarLink:nth-child(4) {
+    animation-delay: 0.4s;
+  }
+
+  .sidebarLinks .sidebarLink:nth-child(5) {
+    animation-delay: 0.5s;
   }
 }
 
@@ -232,5 +256,17 @@
 
   .closeButton {
     font-size: 1.8rem;
+  }
+}
+
+/* Keyframes for Slide-in Animation */
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
   }
 }
