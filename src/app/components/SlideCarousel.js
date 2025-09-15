@@ -21,7 +21,7 @@ const slides = [
     src: "/cover3.jpg",
     alt: "SupaNova Project 3",
     caption: "Cybersecurity Excellence",
-    subCaption: "Protecting your digital world with advanced security",
+    subCaption: "Protecting your digital world with advanced security from Experienced Ethical Hackers",
   },
   {
     src: "/cover2.jpg",
@@ -71,7 +71,6 @@ export default function SlideCarousel() {
 
   return (
     <div className={styles.carouselContainer}>
-      {/* Desktop Carousel */}
       <div className={styles.carousel}>
         <div className={styles.slideContainer}>
           {slides.map((slide, index) => (
@@ -83,8 +82,9 @@ export default function SlideCarousel() {
                 src={slide.src}
                 alt={slide.alt}
                 fill
-                sizes="100vw"
+                sizes="(max-width: 768px) 100vw, 100vw"
                 className={styles.image}
+                priority={index === 0} // Optimize initial slide loading
               />
               <div className={styles.overlay}>
                 <h3 className={styles.caption}>{slide.caption}</h3>
@@ -132,29 +132,6 @@ export default function SlideCarousel() {
           ))}
         </div>
       </div>
-
-      {/* Mobile Static Image Layout */}
-      <div className={styles.mobileLayout}>
-        <Image
-          src="/mobile.jpg" // New image for mobile
-          alt="SupaNova Mobile Background"
-          fill
-          sizes="100vw"
-          className={styles.image}
-        />
-        <div className={styles.mobileOverlay}>
-          <h3 className={styles.mobileCaption}>SupaNova Technologies</h3>
-          <a href="/services" className={styles.mobileStartButton}>
-            Start with Us
-          </a>
-          <a href="/about" className={styles.mobileExploreButton}>
-            Explore Our World!
-          </a>
-        </div>
-      </div>
     </div>
   );
-
 }
-
-
