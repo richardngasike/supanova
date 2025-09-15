@@ -182,24 +182,21 @@
   margin-bottom: 1rem;
 }
 
-.socialLinksRow {
-  display: flex;
-  flex-direction: row; /* Horizontal layout for social links */
-  gap: 1rem; /* Spacing between icons */
-  justify-content: center; /* Center icons in row */
-}
-
 .sidebarSocialLink {
+  color: #e6f0ff;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
   display: flex;
   align-items: center;
-  justify-content: center;
-  width: 40px; /* Fixed size for icon container */
-  height: 40px;
-  transition: transform 0.2s ease;
+  gap: 0.5rem;
+  padding: 0.5rem 0;
+  transition: color 0.3s ease, transform 0.2s ease;
 }
 
 .sidebarSocialLink:hover {
-  transform: scale(1.1); /* Scale on hover for icon-only links */
+  color: #ffffff;
+  transform: translateX(5px) scale(1.05);
 }
 
 .socialIcon {
@@ -258,15 +255,18 @@
   }
 
   /* Staggered animation for each link */
-  .sidebarLinks .sidebarLink:nth-child(1) {
+  .sidebarLinks .sidebarLink:nth-child(1),
+  .sidebarLinks .socialLinks .sidebarSocialLink:nth-child(1) {
     animation-delay: 0.1s;
   }
 
-  .sidebarLinks .sidebarLink:nth-child(2) {
+  .sidebarLinks .sidebarLink:nth-child(2),
+  .sidebarLinks .socialLinks .sidebarSocialLink:nth-child(2) {
     animation-delay: 0.2s;
   }
 
-  .sidebarLinks .sidebarLink:nth-child(3) {
+  .sidebarLinks .sidebarLink:nth-child(3),
+  .sidebarLinks .socialLinks .sidebarSocialLink:nth-child(3) {
     animation-delay: 0.3s;
   }
 
@@ -290,19 +290,19 @@
     animation-delay: 0.8s;
   }
 
-  .socialLinks .socialTitle {
-    animation-delay: 0.9s;
+  .socialLinks {
+    animation-delay: 0.9s; /* Social section title delay */
   }
 
-  .socialLinksRow .sidebarSocialLink:nth-child(1) {
+  .socialLinks .sidebarSocialLink:nth-child(1) {
     animation-delay: 1s;
   }
 
-  .socialLinksRow .sidebarSocialLink:nth-child(2) {
+  .socialLinks .sidebarSocialLink:nth-child(2) {
     animation-delay: 1.1s;
   }
 
-  .socialLinksRow .sidebarSocialLink:nth-child(3) {
+  .socialLinks .sidebarSocialLink:nth-child(3) {
     animation-delay: 1.2s;
   }
 }
@@ -326,22 +326,13 @@
     padding: 2rem 1.5rem;
   }
 
-  .sidebarLink {
+  .sidebarLink,
+  .sidebarSocialLink {
     font-size: 1rem;
   }
 
   .socialTitle {
     font-size: 1rem;
-  }
-
-  .sidebarSocialLink {
-    width: 35px; /* Smaller icon container for smaller screens */
-    height: 35px;
-  }
-
-  .socialIcon {
-    width: 18px;
-    height: 18px;
   }
 
   .closeButton {
