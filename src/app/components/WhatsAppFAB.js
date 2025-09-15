@@ -13,7 +13,7 @@ const WhatsAppFAB = () => {
     // Check if the element already exists to avoid duplicates
     if (!document.getElementById("whatsappFabContainer")) {
       const link = document.createElement("a");
-      link.href = `https://icons8.com/icon/7OeRNqg6S7Vf/whatsapp`;
+      link.href = `https://wa.me/254739745946`;
       link.target = "_blank";
       link.rel = "noopener noreferrer";
       link.className = styles.whatsappFab;
