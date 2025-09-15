@@ -35,7 +35,7 @@
   font-size: 1.1rem;
   font-weight: 600; /* Bolder font for prominence */
   position: relative; /* For underline effect */
-  transition: color 0.3s ease, transform 0.2s ease; /* Fixed: Removed invalid 'red' property */
+  transition: color 0.3s ease, transform 0.2s ease;
 }
 
 .navLink:hover {
@@ -130,7 +130,7 @@
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 2rem; /* Increased gap for better touch targets */
+  gap: 1rem; /* Reduced gap to fit more items */
   margin-top: 4rem;
 }
 
@@ -141,6 +141,8 @@
   font-weight: 500;
   position: relative; /* For underline effect */
   transition: color 0.3s ease, transform 0.2s ease;
+  display: block;
+  padding: 0.5rem 0;
 }
 
 .sidebarLink:hover {
@@ -161,6 +163,48 @@
 
 .sidebarLink:hover::after {
   width: 100%; /* Underline expands on hover */
+}
+
+.sidebarSeparator {
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.3); /* Subtle white line */
+  margin: 0.5rem 0;
+}
+
+.socialLinks {
+  margin-top: 2rem;
+}
+
+.socialTitle {
+  color: #e6f0ff;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.sidebarSocialLink {
+  color: #e6f0ff;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.sidebarSocialLink:hover {
+  color: #ffffff;
+  transform: translateX(5px) scale(1.05);
+}
+
+.socialIcon {
+  filter: brightness(0.9); /* Slightly dim for consistency */
+}
+
+.socialIcon:hover {
+  filter: brightness(1); /* Brighten on hover */
 }
 
 .overlay {
@@ -202,7 +246,8 @@
     width: 240px; /* Slightly larger for better usability */
   }
 
-  .sidebarLink {
+  .sidebarLink,
+  .sidebarSocialLink {
     font-size: 1.1rem;
     opacity: 0; /* Start hidden for animation */
     transform: translateX(20px); /* Start off-screen to the right */
@@ -210,15 +255,18 @@
   }
 
   /* Staggered animation for each link */
-  .sidebarLinks .sidebarLink:nth-child(1) {
+  .sidebarLinks .sidebarLink:nth-child(1),
+  .sidebarLinks .socialLinks .sidebarSocialLink:nth-child(1) {
     animation-delay: 0.1s;
   }
 
-  .sidebarLinks .sidebarLink:nth-child(2) {
+  .sidebarLinks .sidebarLink:nth-child(2),
+  .sidebarLinks .socialLinks .sidebarSocialLink:nth-child(2) {
     animation-delay: 0.2s;
   }
 
-  .sidebarLinks .sidebarLink:nth-child(3) {
+  .sidebarLinks .sidebarLink:nth-child(3),
+  .sidebarLinks .socialLinks .sidebarSocialLink:nth-child(3) {
     animation-delay: 0.3s;
   }
 
@@ -228,6 +276,34 @@
 
   .sidebarLinks .sidebarLink:nth-child(5) {
     animation-delay: 0.5s;
+  }
+
+  .sidebarLinks .sidebarLink:nth-child(6) {
+    animation-delay: 0.6s;
+  }
+
+  .sidebarLinks .sidebarLink:nth-child(7) {
+    animation-delay: 0.7s;
+  }
+
+  .sidebarLinks .sidebarLink:nth-child(8) {
+    animation-delay: 0.8s;
+  }
+
+  .socialLinks {
+    animation-delay: 0.9s; /* Social section title delay */
+  }
+
+  .socialLinks .sidebarSocialLink:nth-child(1) {
+    animation-delay: 1s;
+  }
+
+  .socialLinks .sidebarSocialLink:nth-child(2) {
+    animation-delay: 1.1s;
+  }
+
+  .socialLinks .sidebarSocialLink:nth-child(3) {
+    animation-delay: 1.2s;
   }
 }
 
@@ -250,7 +326,12 @@
     padding: 2rem 1.5rem;
   }
 
-  .sidebarLink {
+  .sidebarLink,
+  .sidebarSocialLink {
+    font-size: 1rem;
+  }
+
+  .socialTitle {
     font-size: 1rem;
   }
 
