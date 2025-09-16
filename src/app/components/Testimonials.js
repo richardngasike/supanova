@@ -5,7 +5,14 @@ import Image from "next/image";
 import { FaQuoteLeft } from "react-icons/fa"; // Quote icon for styling
 import styles from "../styles/testimonials.module.css";
 
-const testimonials = [
+const testimonials = [  
+  {
+    avatar: "/avatars/charlesbirungi.jpg",
+    name: "Dr. Charles Birungi",
+    title: "Dr. ",
+    quote:
+      "It's inspiring to watch supanova grow and transition to the latest tech trends",
+  },
   {
     avatar: "/avatars/lekerpes.jpg",
     name: "Sylvester Lekerpes",
