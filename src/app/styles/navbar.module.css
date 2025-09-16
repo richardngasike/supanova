@@ -78,8 +78,8 @@
   display: none;
   background: none;
   border: none;
-  color: #ffffff;
-  font-size: 1.5rem;
+  color: hsl(0, 0%, 100%);
+  font-size: 2.0rem;
   cursor: pointer;
   transition: transform 0.3s ease; /* Smooth rotation for hamburger */
 }
@@ -89,7 +89,7 @@
 }
 
 .hamburgerIcon {
-  font-size: 1.8rem;
+  font-size: 2.0rem;
 }
 
 .sidebar {
@@ -98,12 +98,15 @@
   right: 0;
   width: 280px; /* Slightly wider for comfort */
   height: 100%;
-  background: linear-gradient(180deg, #005bb5, #003087); /* Gradient for modern look */
+  background: linear-gradient(180deg, rgba(0, 91, 181, 0.8), rgba(0, 48, 135, 0.8)), 
+              url('/public/sidebarbg.jpg') no-repeat center/cover;
+  /* Use a subtle image with low opacity via rgba in the gradient */
   transform: translateX(100%);
   transition: transform 0.4s ease-in-out; /* Smoother sidebar transition */
   z-index: 1001;
   padding: 2.5rem 2rem;
   box-shadow: -4px 0 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+  color: #fff; /* Ensure text is visible against the background */
 }
 
 .sidebarOpen {
@@ -173,6 +176,10 @@
 
 .socialLinks {
   margin-top: 2rem;
+  display: flex; /* Enable flexbox */
+  flex-direction: row; /* Arrange items in a row */
+  gap: 1rem; /* Space between links */
+  flex-wrap: wrap; /* Allow wrapping if needed */
 }
 
 .socialTitle {
@@ -190,10 +197,9 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  padding: 0.5rem 0;
+  padding: 0.5rem;
   transition: color 0.3s ease, transform 0.2s ease;
 }
-
 .sidebarSocialLink:hover {
   color: #ffffff;
   transform: translateX(5px) scale(1.05);
@@ -243,7 +249,11 @@
   }
 
   .sidebar {
-    width: 240px; /* Slightly larger for better usability */
+    width: 100%;
+    padding: 1rem 1.2rem;
+    background: linear-gradient(180deg, rgba(0, 91, 181, 0.8), rgba(0, 48, 135, 0.8)), 
+              url('/public/sidebarbg.jpg') no-repeat center/cover;
+  /* Use a subtle image with low opacity via rgba in the gradient */
   }
 
   .sidebarLink,
@@ -322,8 +332,11 @@
   }
 
   .sidebar {
-    width: 200px;
-    padding: 2rem 1.5rem;
+    width: 100%;
+    padding: 1rem 1.2rem;
+    background: linear-gradient(180deg, rgba(0, 91, 181, 0.8), rgba(0, 48, 135, 0.8)), 
+              url('/sidebarbg.jpg') no-repeat center/cover;
+
   }
 
   .sidebarLink,
