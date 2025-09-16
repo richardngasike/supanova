@@ -1,9 +1,16 @@
+/* Reset default margins/padding to prevent spaces */
+body {
+  margin: 0;
+  padding: 0;
+}
+
 .carouselContainer {
   position: relative;
-  width: 100%;
-  max-width: 100%;
+  width: 100vw; /* Use viewport width to ensure edge-to-edge */
+  max-width: none; /* Remove max-width constraint */
   overflow: hidden;
-  margin: 0 auto;
+  margin: 0; /* Remove centering margin */
+  padding: 0; /* Ensure no padding */
 }
 
 .carousel {
@@ -36,6 +43,7 @@
   object-fit: cover; /* Ensures image covers the slide area */
   width: 100%;
   height: 100%;
+  display: block; /* Remove any inline gaps */
 }
 
 .overlay {
@@ -44,7 +52,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+  background: rgba(0, 0, 0, 0.5);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -52,6 +60,7 @@
   text-align: center;
   color: #ffffff;
   padding: 2rem;
+  box-sizing: border-box;
 }
 
 .caption {
@@ -140,9 +149,15 @@
 
 /* Mobile Styles */
 @media (max-width: 768px) {
+  .carouselContainer {
+    width: 100vw; /* Ensure full viewport width */
+    margin: 0;
+    padding: 0;
+  }
+
   .carousel {
     width: 100%;
-    height: 500px; /* Matches typical mobile static image height */
+    height: 500px;
   }
 
   .caption {
@@ -173,28 +188,43 @@
 }
 
 @media (max-width: 480px) {
-  .carousel {    
+  .carouselContainer {
+    width: 100vw; /* Ensure full viewport width */
+    margin: 0;
+    padding: 0;
+  }
+
+  .carousel {
     width: 100%;
-    height: 50;  
+    height: 400px; /* Fixed height for small screens */
   }
 
   .caption {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
 
   .subCaption {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
+    max-width: 95%;
   }
 
   .learnMoreButton {
     padding: 0.4rem 0.8rem;
     font-size: 0.8rem;
+    min-width: 120px;
   }
-}
 
-@media (max-width: 480px) {
-  .carousel {
-    width: 100%;
-    height: 400px; /* Adjust height for smaller screens, e.g., 400px or 50vh */
+  .prev,
+  .next {
+    font-size: 1.2rem;
+    padding: 0.4rem;
+    min-width: 44px;
+    min-height: 44px;
+  }
+
+  .dot {
+    width: 8px;
+    height: 8px;
+    margin: 0 5px;
   }
 }
