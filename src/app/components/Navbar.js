@@ -1,4 +1,4 @@
-"use client"; // Client-side component for interactivity
+"use client"; 
 
 import { useState } from "react";
 import Image from "next/image";
@@ -18,9 +18,7 @@ export default function Navbar() {
     { name: "Services", href: "/services" },
     { name: "Contact", href: "/contact" },
     { name: "Shop", href: "/shop" },
-    { name: "Blog", href: "/blog" },
-    { name: "Careers", href: "/careers" },
-    { name: "Support", href: "/support" },
+    { name: "Downloads", href: "/downloads" },
   ];
 
   const socialItems = [
@@ -95,7 +93,7 @@ export default function Navbar() {
             </li>
           ))}
           <li className={styles.socialLinks}>
-            <h4 className={styles.socialTitle}>Follow Us</h4>
+            {/* <h4 className={styles.socialTitle}>Follow Us</h4> */}
             {socialItems.map((item) => (
               <div key={item.name}>
                 <Link
