@@ -79,7 +79,7 @@ export default function About() {
           <div className={styles.storyGrid}>
             <div className={`${styles.storyCard} ${styles.animateSlideUp}`}>
               <Image
-                src="/startup.jpg" 
+                src="/startup.jpg"
                 alt="Founding of SupaNova"
                 width={400}
                 height={300}
@@ -87,7 +87,7 @@ export default function About() {
               />
               <h3>2018: The Beginning</h3>
               <p>
-                Founded by Richard Ngasike in Kenya, SupaNova started as a small team focused on mobile app development with Flutter.
+                Founded by Richard Ngasike in Kenya, SupaNova&apos;s started as a small team focused on mobile app development with Flutter.
               </p>
             </div>
             <div className={`${styles.storyCard} ${styles.animateSlideUp}`}>
@@ -118,34 +118,36 @@ export default function About() {
             </div>
           </div>
         </section>
+
+        {/* About Content Section */}
         <section className={styles.aboutContent}>
-  <div className={styles.aboutContentImageContainer}>
-    <Image
-      src="/aboutcontent.jpg" // Replace with your background image
-      alt="SupaNova Mission and Vision Background"
-      fill
-      sizes="100vw"
-      className={styles.aboutContentImage}
-    />
-    <div className={styles.aboutContentOverlay}></div>
-  </div>
-  <div className={styles.aboutContentInner}>
-    <h2 className={styles.sectionTitle}>Our Mission</h2>
-    <p className={styles.sectionText}>
-      At SupaNova Technologies, we are dedicated to empowering businesses through innovative technology. Our team of experts delivers top-tier software development, creative graphic design, and robust cybersecurity solutions to drive success.
-    </p>
-    <h2 className={styles.sectionTitle}>Our Vision</h2>
-    <p className={styles.sectionText}>
-      To be a global leader in transformative technology, creating solutions that inspire and secure the digital world.
-    </p>
-  </div>
-</section>
+          <div className={styles.aboutContentImageContainer}>
+            <Image
+              src="/aboutcontent.jpg" // Replace with your background image
+              alt="SupaNova Mission and Vision Background"
+              fill
+              sizes="100vw"
+              className={styles.aboutContentImage}
+            />
+            <div className={styles.aboutContentOverlay}></div>
+          </div>
+          <div className={styles.aboutContentInner}>
+            <h2 className={styles.sectionTitle}>Our Mission</h2>
+            <p className={styles.sectionText}>
+              At SupaNova Technologies, we are dedicated to empowering businesses through innovative technology. Our team of experts delivers top-tier software development, creative graphic design, and robust cybersecurity solutions to drive success.
+            </p>
+            <h2 className={styles.sectionTitle}>Our Vision</h2>
+            <p className={styles.sectionText}>
+              To be a global leader in transformative technology, creating solutions that inspire and secure the digital world.
+            </p>
+          </div>
+        </section>
 
         {/* Team Section */}
         <section className={styles.teamSection}>
           <h2 className={styles.sectionTitle}>Our Team</h2>
           <p className={styles.sectionSubtitle}>
-            Meet the talented individuals driving SupaNova's success.
+            Meet the talented individuals driving SupaNova&apos;s success.
           </p>
           <div className={styles.teamGrid}>
             <div className={`${styles.teamCard} ${styles.animateZoomIn}`}>
