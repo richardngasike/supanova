@@ -1,0 +1,307 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #f9fafb;
+}
+
+.main {
+  flex: 1;
+  padding-top: 90px;
+  padding-bottom: 2rem;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  color: #ffffff;
+  text-align: center;
+  padding: 6rem 2rem;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.heroImageContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.heroImage {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.heroOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 2;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 3;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.heroTitle {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  font-family: "Inter", sans-serif;
+}
+
+.heroSubtitle {
+  font-size: 1.3rem;
+  line-height: 1.6;
+  max-width: 700px;
+  margin: 0 auto;
+  font-family: "Inter", sans-serif;
+}
+
+.heroCta {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.75rem 1.5rem;
+  background-color: #0070f3;
+  color: #ffffff;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.heroCta:hover {
+  background-color: #005bb5;
+}
+
+/* Downloads Section */
+.downloadsSection {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.sectionTitle {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #111827;
+  font-family: "Inter", sans-serif;
+}
+
+.sectionSubtitle {
+  font-size: 1.2rem;
+  color: #6b7280;
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  line-height: 1.5;
+}
+
+.downloadsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.downloadCard {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  transition: transform 0.3s ease;
+}
+
+.downloadCard:hover {
+  transform: translateY(-5px);
+}
+
+.downloadImage {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.downloadCard h3 {
+  font-size: 1.5rem;
+  color: #111827;
+  margin-bottom: 0.5rem;
+}
+
+.downloadCard p {
+  color: #6b7280;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.downloadActions {
+  text-align: center;
+}
+
+.downloadButton,
+.viewButton {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.downloadButton {
+  background-color: #10b981;
+  color: #ffffff;
+}
+
+.downloadButton:hover {
+  background-color: #059669;
+}
+
+.viewButton {
+  background-color: #3b82f6;
+  color: #ffffff;
+}
+
+.viewButton:hover {
+  background-color: #2563eb;
+}
+
+/* CEO Section */
+.ceoSection {
+  padding: 4rem 2rem;
+  background-color: #f3f4f6;
+  text-align: center;
+}
+
+.ceoContent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.ceoImageContainer {
+  flex: 0 0 auto;
+}
+
+.ceoImage {
+  border-radius: 50%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.ceoText {
+  flex: 1;
+  min-width: 300px;
+  text-align: left;
+}
+
+.ceoBio {
+  font-size: 1.1rem;
+  color: #6b7280;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.portfolioButton {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: #0070f3;
+  color: #ffffff;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.portfolioButton:hover {
+  background-color: #005bb5;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .main {
+    padding-top: 70px;
+  }
+
+  .hero {
+    padding: 4rem 1.5rem;
+    min-height: 50vh;
+  }
+
+  .heroTitle {
+    font-size: 2.5rem;
+  }
+
+  .heroSubtitle {
+    font-size: 1.1rem;
+  }
+
+  .sectionTitle {
+    font-size: 2rem;
+  }
+
+  .sectionSubtitle {
+    font-size: 1rem;
+  }
+
+  .downloadsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .ceoContent {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .ceoText {
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .main {
+    padding-top: 60px;
+  }
+
+  .hero {
+    padding: 3rem 1rem;
+    min-height: 40vh;
+  }
+
+  .heroTitle {
+    font-size: 2rem;
+  }
+
+  .heroSubtitle {
+    font-size: 1rem;
+  }
+
+  .sectionTitle {
+    font-size: 1.8rem;
+  }
+
+  .ceoBio {
+    font-size: 1rem;
+  }
+}
