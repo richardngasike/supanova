@@ -6,7 +6,7 @@ export default function Footer() {
     <footer 
       className={styles.footer}
       style={{
-        backgroundImage: "url('/giphy.webp')",
+        backgroundImage: "url('/200.webp')",
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat"
