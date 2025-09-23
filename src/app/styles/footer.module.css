@@ -1,5 +1,8 @@
 .footer {
-  background-color: #1a1a1a;
+  background-image: url('/public/footer.gif');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   color: white;
   padding: 3rem 2rem; /* Increased padding for more content */
   text-align: center;
