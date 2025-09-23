@@ -3,7 +3,15 @@ import styles from "../styles/footer.module.css";
 
 export default function Footer() {
   return (
-    <footer className={styles.footer}>
+    <footer 
+      className={styles.footer}
+      style={{
+        backgroundImage: "url('/footer.gif')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat"
+      }}
+    >
       <div className={styles.footerContent}>
         <div className={styles.footerSection}>
           <h3>SupaNova Technologies</h3>
