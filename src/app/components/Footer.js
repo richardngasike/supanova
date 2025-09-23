@@ -166,6 +166,9 @@ export default function Footer() {
             &copy; {new Date().getFullYear()} SupaNova Technologies. All rights
             reserved.
           </p>
+          <p>
+            Developed by <a href="https://richardngasike.co.ke" target="_blank" rel="noopener noreferrer">Richard Ngasike</a>
+          </p>  
         </div>
       </div>
     </footer>
