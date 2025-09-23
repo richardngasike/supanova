@@ -1,10 +1,10 @@
 .footer {
-  background-image: url('/public/footer.gif');
+  background-image: url('/footer.gif');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  color: white;
-  padding: 3rem 2rem; /* Increased padding for more content */
+  color: white; /* Reverted to white for better contrast */
+  padding: 3rem 2rem;
   text-align: center;
 }
 
@@ -26,16 +26,18 @@
 .footerSection h3 {
   font-size: 1.5rem;
   margin-bottom: 1rem;
+  color: white; /* Ensure heading is visible */
 }
 
 .footerSection h4 {
   font-size: 1.2rem;
   margin-bottom: 1rem;
+  color: white; /* Ensure heading is visible */
 }
 
 .footerSection p {
   font-size: 0.9rem;
-  color: #a0a0a0;
+  color: #d0d0d0; /* Lighter gray for better visibility */
   margin-bottom: 0.5rem;
   display: flex;
   align-items: center;
@@ -46,7 +48,7 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  color: #a0a0a0;
+  color: #d0d0d0; /* Lighter gray for better visibility */
   text-decoration: none;
   margin-bottom: 0.5rem;
   font-size: 0.9rem;
@@ -113,7 +115,7 @@
 
 .footerBottom p {
   font-size: 0.9rem;
-  color: #a0a0a0;
+  color: #d0d0d0; /* Lighter gray for better visibility */
 }
 
 /* Responsive Design */
