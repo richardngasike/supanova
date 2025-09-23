@@ -48,7 +48,7 @@ export default function About() {
         <section className={styles.hero}>
           <div className={styles.heroImageContainer}>
             <Image
-              src="/about-hero.jpg" // Replace with a tech-themed image
+              src="/aboutcover1.webp"
               alt="SupaNova Technologies Background"
               fill
               sizes="100vw"
